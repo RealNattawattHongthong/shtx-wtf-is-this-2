@@ -1,1 +1,40 @@
-# shtx-wtf-is-this-2
+# 🦈 Gitchi — the Pull Shark Tamagotchi
+
+> **This README is alive.** Every time someone feeds, cleans or plays with Gitchi,
+> a pull request is opened, reviewed by an AI veterinary board, notarized on a
+> proof-of-work blockchain, and merged — which rewrites this file.
+> Built for [Stupid Hackathon X](https://stupid.hackathon.in.th/x/). ห้ามสร้างสิ่งที่มีประโยชน์.
+
+```text
+  ✦ silver ✦
+              
+     __/\__   
+  ><( ^  ^ )  
+     \_w__/   
+              
+```
+
+| | |
+|---|---|
+| **Status** | happy · baby · generation 1 |
+| **Age** | 0 min |
+| 🍙 Hunger | `████████████████░░░░` 80 |
+| 💖 Happiness | `████████████████░░░░` 80 |
+| 🛁 Hygiene | `████████████████████` 100 |
+| ⚡ Energy | `████████████████████` 100 |
+| ❤️ Health | `████████████████████` 100 |
+| **Last action** | hatch by 🤖 nanny |
+| **Blockchain** | height 1 · `0000b2e61ef98f0c…` |
+
+## 🦈 Evolution toward the Golden Pull Shark
+
+`█████░░░░░░░░░░░░░░░░░░░░░░░░░░░` **148 / 1024** merged PRs · current form: **silver**
+
+## 🪦 Graveyard
+
+| Gen | Name | Cause of death | Actions | Died (UTC) |
+|---|---|---|---|---|
+| – | nobody yet | – | – | – |
+
+---
+How it works: [docs/HOW.md](docs/HOW.md)
