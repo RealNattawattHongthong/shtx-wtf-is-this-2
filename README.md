@@ -19,17 +19,17 @@
 |---|---|
 | **Status** | happy · baby · generation 1 |
 | **Age** | 1 min |
-| 🍙 Hunger | `████████████████████` 100 |
-| 💖 Happiness | `███████████████████░` 94.9 |
+| 🍙 Hunger | `███████████████████░` 95 |
+| 💖 Happiness | `████████████████████` 100 |
 | 🛁 Hygiene | `████████████████████` 99.8 |
-| ⚡ Energy | `████████████████████` 99.9 |
+| ⚡ Energy | `█████████████████░░░` 84.9 |
 | ❤️ Health | `████████████████████` 98 |
-| **Last action** | snack by anonymous guest |
-| **Blockchain** | height 3 · `000007b196e3099e…` |
+| **Last action** | play by anonymous guest |
+| **Blockchain** | height 4 · `000008614022fa15…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`█████░░░░░░░░░░░░░░░░░░░░░░░░░░░` **150 / 1024** merged PRs · current form: **silver**
+`█████░░░░░░░░░░░░░░░░░░░░░░░░░░░` **151 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
