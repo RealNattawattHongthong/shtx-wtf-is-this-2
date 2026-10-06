@@ -26,14 +26,17 @@ as the owner's merged-PR count reaches 16 / 128 / 1024.
 ```sh
 bun install
 bun run demo          # offline rehearsal: fake GitHub, fast biology
-bun start             # LIVE: real PRs on GH_OWNER/GH_REPO using `gh auth token`
+bun start             # LIVE: commits on GH_FORK, PRs into GH_UPSTREAM, using `gh auth token`
 ```
 
 | env | default | |
 |---|---|---|
-| `GH_OWNER` / `GH_REPO` | RealNattawattHongthong / shtx-wtf-is-this-2 | target repo |
+| `GH_UPSTREAM` | nattawatt-com-org/shtx-wtf-is-this-2 | repo the PRs are merged into |
+| `GH_FORK` | RealNattawattHongthong/shtx-wtf-is-this-2 | fork the commits are pushed to |
+| `GH_AUTHOR` | RealNattawattHongthong | whose merged PRs are counted |
 | `NANNY` | `1` | `0` disables autopilot |
-| `NANNY_INTERVAL_SEC` | `45` | one PR = 5 writes; GitHub allows ~500 writes/hour |
+| `NANNY_INTERVAL_SEC` | `150` | one PR = 5 writes |
+| `WRITE_BUDGET_PER_HOUR` / `_PER_MINUTE` | `300` / `30` | self-imposed caps, well under GitHub's 500/h and 80/min |
 | `COAUTHORS` | – | comma-separated **real** GitHub usernames to add as `Co-authored-by` |
 | `GUEST_COAUTHOR` | `1` | visitors may enter their own GitHub username to be credited |
 | `ANTHROPIC_API_KEY` | – | real AI vet board for human actions |

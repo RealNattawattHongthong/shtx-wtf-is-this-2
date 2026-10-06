@@ -23,7 +23,7 @@ let forge: Forge;
 if (config.dryRun) {
   forge = new FakeForge();
 } else {
-  const gh = new GitHub(await resolveToken(), config.owner, config.repo, config.base);
+  const gh = new GitHub(await resolveToken(), config);
   gh.onWait = (sec, why) => emit("log", { at: Date.now(), level: "warn", msg: `${why} — cooling down ${sec}s` });
   forge = gh;
 }
@@ -102,4 +102,4 @@ Bun.serve({
 });
 
 console.log(`🦈 Gitchi running → http://localhost:${config.port}  (LAN: ${lanUrl})`);
-console.log(`   repo: ${config.owner}/${config.repo}  dryRun=${config.dryRun}  nanny=${config.nanny} every ${config.nannyIntervalSec}s`);
+console.log(`   ${config.fork.owner}/${config.fork.repo} → ${config.upstream.owner}/${config.upstream.repo}  dryRun=${config.dryRun}  nanny=${config.nanny} every ${config.nannyIntervalSec}s  budget ${config.writeBudgetPerHour}/h ${config.writeBudgetPerMinute}/min`);
