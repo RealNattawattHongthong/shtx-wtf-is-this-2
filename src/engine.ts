@@ -79,7 +79,7 @@ export class Engine {
       nextNannyAt: this.nextNannyAt,
       recent: this.recent.slice(0, 30),
       stages: STAGES.map((s) => (s.id === "vets" && config.anthropicKey ? { ...s, tech: "Claude Haiku ×3 (real AI)" } : s)),
-      repo: `${config.owner}/${config.repo}`,
+      repo: `${config.upstream.owner}/${config.upstream.repo}`,
       dryRun: config.dryRun,
       guestCoauthor: config.allowGuestCoauthor,
     };
@@ -187,7 +187,9 @@ export class Engine {
     await this.stage(job, "quantum", async () => ({ detail: quantumMood() }));
 
     const coauthors: string[] = [];
-    const logins = [...config.coauthors, ...(config.allowGuestCoauthor && job.github ? [job.github] : [])];
+    const logins = [...config.coauthors, ...(config.allowGuestCoauthor && job.github ? [job.github] : [])]
+      .map((l) => l.toLowerCase())
+      .filter((l) => l !== config.author.toLowerCase());
     for (const login of new Set(logins)) {
       try {
         coauthors.push(await this.forge.coauthorEmail(login));
@@ -225,8 +227,7 @@ export class Engine {
     const message = [title, "", result, "", `Proof-of-Pet block #${block!.height}: ${block!.hash}`, ...(coauthors.length ? ["", ...coauthors.map((c) => `Co-authored-by: ${c}`)] : [])].join("\n");
 
     const pr = await this.stage(job, "git", async () => {
-      const branch = `pet/g${ticked!.generation}-${action}-${Date.now().toString(36)}`;
-      const merged = await this.forge.openAndMerge({ branch, files: files!, message, title, body });
+      const merged = await this.forge.openAndMerge({ files: files!, message, title, body });
       return { detail: `PR #${merged.number} opened & merged`, value: merged };
     });
 

@@ -13,7 +13,6 @@ export interface MergedPR {
 }
 
 export interface PRRequest {
-  branch: string;
   files: FileChange[];
   message: string;
   title: string;
@@ -27,23 +26,56 @@ export interface Forge {
   openAndMerge(req: PRRequest): Promise<MergedPR>;
 }
 
+export interface Repo {
+  owner: string;
+  repo: string;
+}
+
+export interface GitHubOptions {
+  author: string;
+  upstream: Repo;
+  fork: Repo;
+  base: string;
+  writeBudgetPerHour: number;
+  writeBudgetPerMinute: number;
+}
+
+// The fork reuses one branch for every contribution; it's force-moved to each new commit.
+const FORK_BRANCH = "gitchi-contribution";
+const HOUR = 3_600_000;
+const MINUTE = 60_000;
+
 export class GitHub implements Forge {
   onWait?: (sec: number, why: string) => void;
   private emailCache = new Map<string, string>();
+  private writes: number[] = [];
 
-  constructor(
-    private token: string,
-    private owner: string,
-    private repo: string,
-    private base: string,
-  ) {}
+  constructor(private token: string, private o: GitHubOptions) {}
 
-  private get r() {
-    return `/repos/${this.owner}/${this.repo}`;
+  private path(r: Repo) {
+    return `/repos/${r.owner}/${r.repo}`;
+  }
+
+  // Never exceed our own hourly budget of content-creating requests, so GitHub never has to stop us.
+  private async throttleWrite() {
+    for (;;) {
+      const now = Date.now();
+      this.writes = this.writes.filter((t) => now - t < HOUR);
+      const lastMinute = this.writes.filter((t) => now - t < MINUTE);
+      if (this.writes.length < this.o.writeBudgetPerHour && lastMinute.length < this.o.writeBudgetPerMinute) {
+        this.writes.push(now);
+        return;
+      }
+      const hourly = this.writes.length >= this.o.writeBudgetPerHour;
+      const wait = Math.ceil(((hourly ? this.writes[0] + HOUR : lastMinute[0] + MINUTE) - now) / 1000);
+      this.onWait?.(wait, hourly ? `hourly write budget (${this.o.writeBudgetPerHour}/h) used up` : `minute write budget (${this.o.writeBudgetPerMinute}/min) used up`);
+      await sleep(wait * 1000 + 250);
+    }
   }
 
   async req<T = any>(method: string, path: string, body?: unknown): Promise<T> {
     for (let attempt = 0; ; attempt++) {
+      if (method !== "GET") await this.throttleWrite();
       const res = await fetch(`https://api.github.com${path}`, {
         method,
         headers: {
@@ -85,7 +117,7 @@ export class GitHub implements Forge {
 
   async readFile(path: string): Promise<string | null> {
     try {
-      const f = await this.req("GET", `${this.r}/contents/${path}?ref=${this.base}`);
+      const f = await this.req("GET", `${this.path(this.o.upstream)}/contents/${path}?ref=${this.o.base}`);
       return Buffer.from(f.content, "base64").toString("utf8");
     } catch (e) {
       if (String(e).includes("→ 404")) return null;
@@ -94,7 +126,7 @@ export class GitHub implements Forge {
   }
 
   async mergedPRCount(): Promise<number> {
-    const q = encodeURIComponent(`author:${this.owner} is:pr is:merged`);
+    const q = encodeURIComponent(`author:${this.o.author} is:pr is:merged`);
     const res = await this.req("GET", `/search/issues?q=${q}&per_page=1`);
     return res.total_count;
   }
@@ -109,27 +141,41 @@ export class GitHub implements Forge {
     return trailer;
   }
 
-  // 5 content-creating requests: tree, commit, ref, pull, merge.
-  async openAndMerge({ branch, files, message, title, body }: PRRequest): Promise<MergedPR> {
-    const r = this.r;
-    const ref = await this.req("GET", `${r}/git/ref/heads/${this.base}`);
+  private async pointForkBranch(sha: string) {
+    const fork = this.path(this.o.fork);
+    try {
+      await this.req("PATCH", `${fork}/git/refs/heads/${FORK_BRANCH}`, { sha, force: true });
+    } catch (e) {
+      if (!/→ (404|422)/.test(String(e))) throw e;
+      await this.req("POST", `${fork}/git/refs`, { ref: `refs/heads/${FORK_BRANCH}`, sha });
+    }
+  }
+
+  // Commit on the fork, PR into upstream, merge upstream. 5 content-creating requests.
+  // Fork and upstream share one object store, so the fork can build on upstream's latest commit directly.
+  async openAndMerge({ files, message, title, body }: PRRequest): Promise<MergedPR> {
+    const up = this.path(this.o.upstream);
+    const fork = this.path(this.o.fork);
+    const ref = await this.req("GET", `${up}/git/ref/heads/${this.o.base}`);
     const baseSha: string = ref.object.sha;
-    const baseCommit = await this.req("GET", `${r}/git/commits/${baseSha}`);
-    const tree = await this.req("POST", `${r}/git/trees`, {
+    const baseCommit = await this.req("GET", `${up}/git/commits/${baseSha}`);
+    const tree = await this.req("POST", `${fork}/git/trees`, {
       base_tree: baseCommit.tree.sha,
       tree: files.map((f) => ({ path: f.path, mode: "100644", type: "blob", content: f.content })),
     });
-    const commit = await this.req("POST", `${r}/git/commits`, {
-      message,
-      tree: tree.sha,
-      parents: [baseSha],
+    const commit = await this.req("POST", `${fork}/git/commits`, { message, tree: tree.sha, parents: [baseSha] });
+    await this.pointForkBranch(commit.sha);
+    const pr = await this.req("POST", `${up}/pulls`, {
+      title,
+      head: `${this.o.fork.owner}:${FORK_BRANCH}`,
+      base: this.o.base,
+      body,
+      maintainer_can_modify: false,
     });
-    await this.req("POST", `${r}/git/refs`, { ref: `refs/heads/${branch}`, sha: commit.sha });
-    const pr = await this.req("POST", `${r}/pulls`, { title, head: branch, base: this.base, body });
 
     for (let i = 0; ; i++) {
       try {
-        const m = await this.req("PUT", `${r}/pulls/${pr.number}/merge`, {
+        const m = await this.req("PUT", `${up}/pulls/${pr.number}/merge`, {
           merge_method: "merge",
           commit_title: `Merge #${pr.number}: ${title}`,
         });
