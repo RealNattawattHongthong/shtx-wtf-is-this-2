@@ -2,25 +2,25 @@
   "name": "Gitchi",
   "generation": 1,
   "born": 1791307661758,
-  "lastTick": 1791307761420,
-  "hunger": 95,
-  "happiness": 100,
+  "lastTick": 1791307776541,
+  "hunger": 94.9,
+  "happiness": 80,
   "hygiene": 100,
-  "energy": 84.9,
+  "energy": 85,
   "health": 98,
-  "asleep": true,
+  "asleep": false,
   "sick": false,
   "poops": 0,
   "alive": true,
-  "actions": 6,
+  "actions": 7,
   "chain": {
-    "height": 6,
-    "hash": "000009f2f72b02d2d5bdd14c7929281c81ea294746ed2e5024ee9f9436c6e213"
+    "height": 7,
+    "hash": "00000f2301e88785d5af52658de5c3f7fffa3a98232191fe2443649d8ebcb63e"
   },
   "graveyard": [],
   "lastAction": {
-    "id": "sleep",
+    "id": "medicine",
     "by": "anonymous guest",
-    "at": 1791307762704
+    "at": 1791307777615
   }
 }
