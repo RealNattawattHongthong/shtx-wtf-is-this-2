@@ -1,0 +1,292 @@
+:root {
+  --xp-blue: #0a246a;
+  --title-a: #0058ee;
+  --title-b: #3a93ff;
+  --title-c: #0042c8;
+  --win-bg: #ece9d8;
+  --win-border: #0831d9;
+  --text: #111;
+  --muted: #555;
+  --ok: #2bb34a;
+  --warn: #e8a400;
+  --err: #d0312d;
+  --lcd: #b7c99a;
+  --lcd-ink: #1f2a12;
+  --aero: rgba(255, 255, 255, 0.55);
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; height: 100%; }
+
+body {
+  font: 13px/1.35 Tahoma, "Segoe UI", Verdana, sans-serif;
+  color: var(--text);
+  background: #3a6ea5;
+  overflow-x: hidden;
+}
+
+/* Bliss, but made of CSS */
+.desktop {
+  min-height: 100vh;
+  padding: 16px 16px 56px 110px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  background:
+    radial-gradient(ellipse 140% 55% at 30% 105%, #4c9a2a 0 48%, transparent 49%),
+    radial-gradient(ellipse 120% 50% at 85% 110%, #5aad31 0 47%, transparent 48%),
+    radial-gradient(ellipse 30% 9% at 22% 22%, rgba(255,255,255,.85), transparent 70%),
+    radial-gradient(ellipse 22% 7% at 70% 14%, rgba(255,255,255,.75), transparent 70%),
+    radial-gradient(ellipse 18% 6% at 48% 30%, rgba(255,255,255,.6), transparent 70%),
+    linear-gradient(#2a6bd6 0%, #5fa3f0 45%, #a9d3fb 70%, #cfe8ff 100%);
+  background-attachment: fixed;
+}
+
+.icons {
+  position: fixed;
+  left: 12px;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 84px;
+}
+.icon {
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  text-shadow: 1px 1px 2px #000;
+  text-decoration: none;
+  cursor: default;
+}
+.icon span { display: block; font-size: 34px; filter: drop-shadow(1px 2px 2px rgba(0,0,0,.4)); }
+
+/* ── Windows ─────────────────────────────────────────────── */
+.window {
+  background: var(--win-bg);
+  border: 3px solid var(--win-border);
+  border-top: 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.main-win { flex: 1 1 980px; max-width: 1180px; }
+.progress-win { flex: 0 1 300px; }
+
+.titlebar {
+  height: 30px;
+  padding: 0 4px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font: bold 13px "Trebuchet MS", Tahoma, sans-serif;
+  text-shadow: 1px 1px #0a1e6e;
+  border-radius: 7px 7px 0 0;
+  background: linear-gradient(var(--title-b) 0%, var(--title-a) 12%, var(--title-a) 40%, var(--title-c) 88%, #0035b8 100%);
+}
+.title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tb-btns { display: flex; gap: 2px; flex: none; }
+.tb-btns i {
+  width: 21px; height: 21px; display: grid; place-items: center;
+  font: bold 11px Tahoma; font-style: normal;
+  border: 1px solid #fff; border-radius: 3px;
+  background: linear-gradient(#3c8cff, #1257e0);
+}
+.tb-btns .x { background: linear-gradient(#e9775a, #c4381b); }
+
+.menubar { display: flex; gap: 14px; padding: 3px 8px; border-bottom: 1px solid #c5c2b2; }
+.menubar span:first-letter { text-decoration: underline; }
+
+.body { padding: 10px; }
+.cols { display: grid; grid-template-columns: 300px minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.col { min-width: 0; }
+
+h3 {
+  margin: 0 0 6px;
+  font: bold 12px Tahoma;
+  color: var(--xp-blue);
+  border-bottom: 1px solid #b7b3a0;
+  padding-bottom: 3px;
+}
+h3 small { font-weight: normal; color: var(--muted); }
+
+.statusbar {
+  display: flex; gap: 10px; justify-content: space-between;
+  padding: 3px 8px; font-size: 11px; border-top: 1px solid #c5c2b2; color: #333;
+}
+#sb-conn.on { color: var(--ok); }
+
+/* ── The egg ─────────────────────────────────────────────── */
+.egg {
+  position: relative;
+  margin: 4px auto 12px;
+  width: 270px;
+  height: 300px;
+  border-radius: 50% 50% 46% 46% / 58% 58% 42% 42%;
+  background: radial-gradient(circle at 35% 25%, #ffe3f5, #ff6fbf 45%, #c2187f 100%);
+  box-shadow: inset -10px -14px 30px rgba(80, 0, 50, 0.45), inset 8px 10px 20px rgba(255,255,255,.4), 0 10px 24px rgba(0,0,0,.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 34px;
+}
+.egg-shine {
+  position: absolute; left: 40px; top: 18px; width: 90px; height: 40px;
+  border-radius: 50%; background: linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,0));
+  transform: rotate(-18deg); pointer-events: none;
+}
+.brand { font: bold 12px "Trebuchet MS"; letter-spacing: 3px; color: #fff; text-shadow: 0 1px 2px #8a0f5a; margin-bottom: 6px; }
+.brand small { font-size: 8px; letter-spacing: 1px; }
+.lcd {
+  width: 196px; height: 150px; padding: 6px;
+  background: var(--lcd); color: var(--lcd-ink);
+  border: 6px solid #6b1b4c; border-radius: 10px;
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,.35);
+  display: flex; flex-direction: column; justify-content: space-between;
+  font: 10px/1.15 "Courier New", monospace;
+}
+.lcd-top, .lcd-bottom { display: flex; justify-content: space-between; font-weight: bold; }
+.lcd-bottom { justify-content: center; text-transform: uppercase; }
+#sprite { margin: 0; font: bold 12px/1.05 "Courier New", monospace; white-space: pre; text-align: left; align-self: center; overflow: hidden; max-width: 100%; }
+#sprite.bounce { animation: bounce .6s ease 2; }
+@keyframes bounce { 50% { transform: translateY(-5px); } }
+.egg-buttons { display: flex; gap: 22px; margin-top: 18px; }
+.egg-buttons b {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff8c9, #f4c21b 60%, #a87b00);
+  box-shadow: 0 3px 4px rgba(0,0,0,.35);
+}
+
+/* ── Stats ──────────────────────────────────────────────── */
+.stats { display: grid; grid-template-columns: 82px 1fr 34px; gap: 4px 6px; align-items: center; font-size: 11px; margin-bottom: 10px; }
+.bar { height: 13px; border: 1px solid #7a7a7a; border-radius: 3px; background: #fff; padding: 1px; }
+.bar i {
+  display: block; height: 100%;
+  background: repeating-linear-gradient(90deg, #3fcb3f 0 8px, transparent 8px 10px);
+  transition: width .6s ease;
+}
+.bar.low i { background: repeating-linear-gradient(90deg, #e6492f 0 8px, transparent 8px 10px); }
+
+/* ── Aero glossy buttons ───────────────────────────────── */
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 10px; }
+.actions button {
+  font-size: 20px; line-height: 1; padding: 6px 0 4px;
+  border: 1px solid #2c5f9e; border-radius: 12px; cursor: pointer;
+  color: #0b2a52;
+  background: linear-gradient(#e6f4ff 0%, #b8defc 48%, #8cc7f7 52%, #c5e7ff 100%);
+  box-shadow: inset 0 1px 0 #fff, 0 2px 4px rgba(0,0,0,.25);
+}
+.actions button span { display: block; font: 10px Tahoma; margin-top: 2px; }
+.actions button:hover { filter: brightness(1.08) saturate(1.2); }
+.actions button:active { transform: translateY(1px); }
+.actions button:disabled { filter: grayscale(1); opacity: .6; cursor: wait; }
+
+fieldset.whoami { border: 1px solid #d0d0bf; border-radius: 4px; padding: 6px 8px; margin: 0; }
+fieldset.whoami legend { color: var(--xp-blue); }
+fieldset.whoami label { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
+fieldset.whoami input { flex: 1; min-width: 0; font: 12px Tahoma; padding: 2px 4px; border: 1px solid #7f9db9; }
+.hint { font-size: 10px; color: var(--muted); margin: 4px 0 0; }
+
+/* ── Service mesh ──────────────────────────────────────── */
+.mesh { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.mesh::before { content: ""; position: absolute; left: 17px; top: 14px; bottom: 14px; width: 2px; background: #9fb6d6; }
+.mesh li { position: relative; display: grid; grid-template-columns: 28px 1fr; gap: 6px; padding: 3px 0; }
+.bubble {
+  z-index: 1; width: 26px; height: 26px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff, #cfe3f7 40%, #8fb0d6);
+  border: 1px solid #6d8fb8; display: grid; place-items: center; font-size: 12px;
+}
+.mesh li.running .bubble { background: radial-gradient(circle at 35% 30%, #fff, #9ff0ff 35%, #18a6e0); animation: pulse .8s infinite; }
+.mesh li.done .bubble { background: radial-gradient(circle at 35% 30%, #fff, #b9f5b0 35%, #2bb34a); }
+.mesh li.error .bubble { background: radial-gradient(circle at 35% 30%, #fff, #ffb3a8 35%, #d0312d); }
+@keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(24,166,224,.25); transform: scale(1.08); } }
+.svc b { font-size: 12px; }
+.svc em { color: var(--muted); font-size: 11px; }
+.svc .detail { font: 10.5px "Lucida Console", monospace; color: #234; word-break: break-word; min-height: 1em; }
+.svc .ms { color: var(--muted); font-size: 10px; margin-left: 4px; }
+
+.queue { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 12px; }
+.countdown { color: var(--muted); font-size: 11px; }
+
+/* ── Feed & log ────────────────────────────────────────── */
+.feed, .log { list-style: none; margin: 0 0 10px; padding: 0; background: #fff; border: 1px solid #7f9db9; overflow-y: auto; }
+.feed { height: 300px; }
+.log { height: 150px; font: 10.5px "Lucida Console", monospace; }
+.feed li { padding: 4px 6px; border-bottom: 1px dotted #ccc; font-size: 12px; }
+.feed li.fresh { animation: fresh 1.5s ease; }
+@keyframes fresh { from { background: #fff7b8; } }
+.feed a { color: #0645ad; font-weight: bold; text-decoration: none; }
+.feed .by { color: var(--muted); font-size: 11px; }
+.feed .co { font-size: 10px; background: #e0ccff; border-radius: 3px; padding: 0 3px; }
+.log li { padding: 1px 4px; }
+.log .warn { color: #8a6100; }
+.log .error { color: var(--err); }
+
+/* ── Progress window ───────────────────────────────────── */
+.tier-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.tier { font-size: 22px; text-align: center; opacity: .35; }
+.tier b { display: block; font-size: 10px; }
+.tier.got { opacity: 1; }
+.xp-progress { height: 22px; border: 1px solid #7a7a7a; border-radius: 4px; padding: 2px; background: #fff; }
+#shark-bar { height: 100%; width: 0; transition: width .8s ease; background: repeating-linear-gradient(90deg, #3fcb3f 0 9px, transparent 9px 11px); }
+.big { font-size: 16px; text-align: center; margin: 8px 0 2px; }
+.small { font-size: 11px; color: #333; text-align: center; margin: 4px 0; }
+.qr-wrap { display: flex; flex-direction: column; align-items: center; margin-top: 10px; }
+#qr { background: #fff; padding: 6px; border: 1px solid #aaa; }
+#qr img, #qr canvas { width: 128px; height: 128px; }
+
+/* ── Taskbar ───────────────────────────────────────────── */
+.taskbar {
+  position: fixed; left: 0; right: 0; bottom: 0; height: 36px; z-index: 20;
+  display: flex; align-items: center; gap: 6px;
+  background: linear-gradient(#3d8bf2 0%, #245edb 10%, #245edb 85%, #1941a5 100%);
+}
+.start {
+  height: 100%; padding: 0 22px 0 14px; border: 0; border-radius: 0 12px 12px 0;
+  color: #fff; font: italic bold 17px "Trebuchet MS", sans-serif; text-shadow: 1px 1px 2px #1a4d0f;
+  background: linear-gradient(#57b84a 0%, #3c9a2e 50%, #2f7f22 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+}
+.task { color: #fff; padding: 5px 10px; border-radius: 3px; background: #3c81f3; font-size: 12px; white-space: nowrap; }
+.task.active { background: #1e52b8; box-shadow: inset 1px 1px 2px rgba(0,0,0,.4); }
+.tray {
+  margin-left: auto; height: 100%; display: flex; align-items: center; gap: 8px; padding: 0 12px;
+  color: #fff; background: linear-gradient(#1290e9, #0d8dea 50%, #097ad0); border-left: 1px solid #0b5fb5;
+}
+
+/* ── Balloon & BSOD ───────────────────────────────────── */
+.balloon {
+  position: fixed; right: 14px; bottom: 46px; z-index: 30; max-width: 300px;
+  background: #ffffe1; border: 1px solid #000; border-radius: 8px; padding: 8px 12px;
+  box-shadow: 2px 3px 8px rgba(0,0,0,.4); font-size: 12px;
+}
+.balloon p { margin: 4px 0 0; }
+.balloon a { color: #0645ad; }
+
+.bsod {
+  position: fixed; inset: 0; z-index: 50; background: #0000aa; color: #fff;
+  font: 16px/1.5 "Lucida Console", "Courier New", monospace;
+  padding: 10vh 10vw; cursor: pointer;
+}
+.bsod-head { display: inline-block; background: #aaa; color: #0000aa; padding: 0 8px; }
+#bsod-msg { color: #ffff55; word-break: break-word; }
+
+[hidden] { display: none !important; }
+
+/* ── Phones (audience scanning the QR) ────────────────── */
+@media (max-width: 1100px) {
+  .cols { grid-template-columns: 300px minmax(0, 1fr); }
+  .feed-col { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .desktop { padding: 8px 8px 48px; }
+  .icons, .menubar, .task:not(.active) { display: none; }
+  .main-win, .progress-win { flex-basis: 100%; }
+  .cols { grid-template-columns: minmax(0, 1fr); }
+  .egg { width: 250px; height: 280px; }
+}

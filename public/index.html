@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gitchi.exe</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+</head>
+<body>
+  <div class="desktop">
+    <div class="icons">
+      <a class="icon" id="repo-link" target="_blank"><span>📁</span>My Pull Requests</a>
+      <div class="icon" id="grave-icon"><span>🗑️</span>Recycle Bin<br />(<b id="grave-count">0</b> pets)</div>
+      <div class="icon"><span>🌐</span>Internet Explorer 6</div>
+    </div>
+
+    <section class="window main-win">
+      <header class="titlebar">
+        <span class="title">🦈 Gitchi.exe — Pull Shark Tamagotchi Enterprise Edition</span>
+        <span class="tb-btns"><i>_</i><i>□</i><i class="x">✕</i></span>
+      </header>
+      <nav class="menubar"><span>File</span><span>Edit</span><span>View</span><span>Pet</span><span>Blockchain</span><span>Help</span></nav>
+      <div class="body cols">
+        <div class="col device-col">
+          <div class="egg">
+            <div class="egg-shine"></div>
+            <div class="brand">GITCHI<small>™ XP</small></div>
+            <div class="lcd">
+              <div class="lcd-top"><span id="pet-name">…</span><span id="pet-gen"></span></div>
+              <pre id="sprite"></pre>
+              <div class="lcd-bottom" id="pet-status">booting…</div>
+            </div>
+            <div class="egg-buttons"><b></b><b></b><b></b></div>
+          </div>
+
+          <div class="stats" id="stats"></div>
+
+          <div class="actions" id="actions">
+            <button data-a="feed">🍙<span>Feed</span></button>
+            <button data-a="snack">🍬<span>Snack</span></button>
+            <button data-a="play">🎾<span>Play</span></button>
+            <button data-a="clean">🛁<span>Clean</span></button>
+            <button data-a="sleep">💤<span>Lights</span></button>
+            <button data-a="medicine">💊<span>Medicine</span></button>
+            <button data-a="pet">✋<span>Pat</span></button>
+          </div>
+
+          <fieldset class="whoami">
+            <legend>Who are you?</legend>
+            <label>Name <input id="by" maxlength="24" placeholder="anonymous guest" /></label>
+            <label id="gh-row">GitHub <input id="gh" maxlength="39" placeholder="optional: become co-parent" /></label>
+            <p class="hint" id="gh-hint">Add your GitHub username and you'll be listed as <code>Co-authored-by</code> on the PR.</p>
+          </fieldset>
+        </div>
+
+        <div class="col mesh-col">
+          <h3>Service Mesh <small id="job-label">idle</small></h3>
+          <ol class="mesh" id="mesh"></ol>
+          <div class="queue">
+            <span>Kafka queue:</span> <b id="queue-len">0</b>
+            <label class="xp-check"><input type="checkbox" id="nanny" /> 🤖 Autopilot nanny</label>
+            <span class="countdown" id="nanny-next"></span>
+          </div>
+        </div>
+
+        <div class="col feed-col">
+          <h3>Merged Pull Requests</h3>
+          <ul class="feed" id="feed"></ul>
+          <h3>Event Log</h3>
+          <ul class="log" id="log"></ul>
+        </div>
+      </div>
+      <footer class="statusbar"><span id="sb-repo"></span><span id="sb-mode"></span><span id="sb-conn">● connecting</span></footer>
+    </section>
+
+    <section class="window progress-win">
+      <header class="titlebar"><span class="title">🦈 Pull Shark Evolution</span><span class="tb-btns"><i>_</i><i class="x">✕</i></span></header>
+      <div class="body">
+        <div class="tier-row">
+          <div class="tier" data-t="bronze">🥉<b>16</b></div>
+          <div class="tier" data-t="silver">🥈<b>128</b></div>
+          <div class="tier" data-t="gold">🥇<b>1024</b></div>
+        </div>
+        <div class="xp-progress"><div id="shark-bar"></div></div>
+        <p class="big"><b id="merged-total">0</b> / 1024 merged PRs</p>
+        <p class="small" id="eta"></p>
+        <p class="small">This session: <b id="session-merged">0</b> merged · <b id="session-co">0</b> co-authored 👯</p>
+        <div class="qr-wrap"><div id="qr"></div><p class="small">Scan to feed the shark<br /><code id="lan"></code></p></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="taskbar">
+    <button class="start">start</button>
+    <div class="task active">🦈 Gitchi.exe</div>
+    <div class="task">🦈 Pull Shark Evolution</div>
+    <div class="tray"><span id="tray-shark">🦈</span><span id="clock"></span></div>
+  </div>
+
+  <div class="balloon" id="balloon" hidden><b id="balloon-title"></b><p id="balloon-text"></p></div>
+
+  <div class="bsod" id="bsod" hidden>
+    <p class="bsod-head">Gitchi</p>
+    <p>A fatal exception 0E has occurred in the GitOps Controller. The pet has been terminated... just kidding, the pet is fine. The PR is not.</p>
+    <p id="bsod-msg"></p>
+    <p>* Press any key to continue _</p>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
