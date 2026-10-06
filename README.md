@@ -7,29 +7,29 @@
 
 ```text
   ✦ silver ✦
-              
-     __/\__   
-  ><( -  - )  
-     \_o__/   
-              
+        /\      
+   ____/  \___  
+  / -   -     \/|
+  \_____o_____/\|
+      \/  \/    
                  z Z z
 ```
 
 | | |
 |---|---|
-| **Status** | sleeping · baby · generation 1 |
-| **Age** | 60 min |
-| 🍙 Hunger | `███████████████████░` 93.5 |
+| **Status** | sleeping · child · generation 1 |
+| **Age** | 1.0 h |
+| 🍙 Hunger | `███████████████████░` 93 |
 | 💖 Happiness | `████████████████████` 100 |
-| 🛁 Hygiene | `███████████████████░` 96.4 |
-| ⚡ Energy | `█████░░░░░░░░░░░░░░░` 27.3 |
-| ❤️ Health | `██████████████████░░` 91.8 |
+| 🛁 Hygiene | `███████████████████░` 96.1 |
+| ⚡ Energy | `██████░░░░░░░░░░░░░░` 28.3 |
+| ❤️ Health | `██████████████████░░` 91.9 |
 | **Last action** | pet by 🤖 nanny |
-| **Blockchain** | height 71 · `0000766923fdb41e…` |
+| **Blockchain** | height 72 · `000047001a67d888…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`███████░░░░░░░░░░░░░░░░░░░░░░░░░` **222 / 1024** merged PRs · current form: **silver**
+`███████░░░░░░░░░░░░░░░░░░░░░░░░░` **223 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
