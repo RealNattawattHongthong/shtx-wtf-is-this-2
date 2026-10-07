@@ -9,27 +9,28 @@
   ✦ silver ✦
               
      __/\__   
-  ><( ^  ^ )  
-     \_w__/   
+  ><( -  - )  
+     \_o__/   
               
+                 z Z z
   💩 
 ```
 
 | | |
 |---|---|
-| **Status** | happy · baby · generation 2 |
+| **Status** | sleeping · baby · generation 2 |
 | **Age** | 47 min |
 | 🍙 Hunger | `████████████████████` 100 |
 | 💖 Happiness | `█████████████████░░░` 85 |
 | 🛁 Hygiene | `████████████████████` 100 |
 | ⚡ Energy | `░░░░░░░░░░░░░░░░░░░░` 0.1 |
 | ❤️ Health | `██████████████████░░` 88.9 |
-| **Last action** | feed by anonymous guest |
-| **Blockchain** | height 169 · `00000bd497adeaee…` |
+| **Last action** | sleep by anonymous guest |
+| **Blockchain** | height 170 · `00000bf636296bae…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`██████████░░░░░░░░░░░░░░░░░░░░░░` **321 / 1024** merged PRs · current form: **silver**
+`██████████░░░░░░░░░░░░░░░░░░░░░░` **322 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
