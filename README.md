@@ -12,7 +12,6 @@
   / ^   ^     \/|
   \_____w_____/\|
       \/  \/    
-  💩 
 ```
 
 | | |
@@ -21,15 +20,15 @@
 | **Age** | 11.9 h |
 | 🍙 Hunger | `████████████████████` 99.4 |
 | 💖 Happiness | `████████████████████` 100 |
-| 🛁 Hygiene | `███████████████████░` 94.6 |
+| 🛁 Hygiene | `████████████████████` 100 |
 | ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 11.8 |
 | ❤️ Health | `█████████████████░░░` 84.4 |
-| **Last action** | pet by oh |
-| **Blockchain** | height 369 · `00000c2e2a6064a7…` |
+| **Last action** | clean by oh |
+| **Blockchain** | height 370 · `00000b17a1ab262d…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`████████████████░░░░░░░░░░░░░░░░` **521 / 1024** merged PRs · current form: **silver**
+`████████████████░░░░░░░░░░░░░░░░` **522 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
