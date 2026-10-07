@@ -2,20 +2,20 @@
   "name": "Mergetaro",
   "generation": 2,
   "born": 1791351285555,
-  "lastTick": 1791394418647,
-  "hunger": 94.7,
-  "happiness": 99.8,
-  "hygiene": 100,
+  "lastTick": 1791394493916,
+  "hunger": 94.4,
+  "happiness": 99.6,
+  "hygiene": 99.9,
   "energy": 0,
-  "health": 82.1,
-  "asleep": false,
+  "health": 81.8,
+  "asleep": true,
   "sick": false,
   "poops": 0,
   "alive": true,
-  "actions": 283,
+  "actions": 284,
   "chain": {
-    "height": 377,
-    "hash": "0000623282e2302cfd935c7bbae677b15f587549876c7933c3a4496213b67fea"
+    "height": 378,
+    "hash": "0000d570bb16c1bbf52ccaf6646a42bca2bbc2fb7967da3d566e8cb7d6a9772d"
   },
   "graveyard": [
     {
@@ -28,8 +28,8 @@
     }
   ],
   "lastAction": {
-    "id": "clean",
+    "id": "sleep",
     "by": "🤖 nanny",
-    "at": 1791394418648
+    "at": 1791394493916
   }
 }
