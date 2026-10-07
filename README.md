@@ -18,17 +18,17 @@
 |---|---|
 | **Status** | happy · teen · generation 2 |
 | **Age** | 12.9 h |
-| 🍙 Hunger | `████████████████████` 97.5 |
-| 💖 Happiness | `████████████████████` 99.5 |
+| 🍙 Hunger | `███████████████████░` 97.4 |
+| 💖 Happiness | `████████████████████` 99.4 |
 | 🛁 Hygiene | `████████████████████` 100 |
 | ⚡ Energy | `███░░░░░░░░░░░░░░░░░` 15 |
 | ❤️ Health | `█████████████████░░░` 83.9 |
 | **Last action** | clean by Nattawatt |
-| **Blockchain** | height 427 · `00000793156f2575…` |
+| **Blockchain** | height 428 · `000004bbf5e0d4e1…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`██████████████████░░░░░░░░░░░░░░` **579 / 1024** merged PRs · current form: **silver**
+`██████████████████░░░░░░░░░░░░░░` **580 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
