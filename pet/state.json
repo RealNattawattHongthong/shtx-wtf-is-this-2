@@ -1,26 +1,35 @@
 {
-  "name": "Gitchi",
-  "generation": 1,
-  "born": 1791307661758,
-  "lastTick": 1791315737293,
-  "hunger": 92.3,
-  "happiness": 100,
-  "hygiene": 98.6,
-  "energy": 26,
-  "health": 91.2,
-  "asleep": true,
+  "name": "Mergetaro",
+  "generation": 2,
+  "born": null,
+  "lastTick": 1791351271324,
+  "hunger": 80,
+  "happiness": 80,
+  "hygiene": 100,
+  "energy": 100,
+  "health": 100,
+  "asleep": false,
   "sick": false,
   "poops": 0,
   "alive": true,
-  "actions": 93,
+  "actions": 0,
   "chain": {
-    "height": 93,
-    "hash": "00003425980ea9695e5a954a40b3bd196842a23492cab39a0d1446aa29251148"
+    "height": 94,
+    "hash": "00000343fae54262352b6bb4e083f10fafa3dde3a80fdc8688b40519ad298eaf"
   },
-  "graveyard": [],
+  "graveyard": [
+    {
+      "name": "Gitchi",
+      "generation": 1,
+      "born": 1791307661758,
+      "diedAt": 1791351269528,
+      "cause": "starvation",
+      "actions": 94
+    }
+  ],
   "lastAction": {
-    "id": "pet",
-    "by": "🤖 nanny",
-    "at": 1791315737293
+    "id": "funeral",
+    "by": "anonymous guest",
+    "at": 1791351271324
   }
 }
