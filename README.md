@@ -9,27 +9,26 @@
   ✦ silver ✦
         /\      
    ____/  \___  
-  / -   -     \/|
-  \_____o_____/\|
+  / o   o     \/|
+  \_____-_____/\|
       \/  \/    
-                 z Z z
 ```
 
 | | |
 |---|---|
-| **Status** | sleeping · teen · generation 2 |
-| **Age** | 15.4 h |
-| 🍙 Hunger | `████████████████░░░░` 81.9 |
-| 💖 Happiness | `████████████████████` 100 |
-| 🛁 Hygiene | `██████████████████░░` 88 |
-| ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 8.4 |
-| ❤️ Health | `█████████████████░░░` 86.9 |
-| **Last action** | pet by Nattawatt |
-| **Blockchain** | height 579 · `00000d34a6627a1a…` |
+| **Status** | normal · teen · generation 2 |
+| **Age** | 15.5 h |
+| 🍙 Hunger | `████████████████░░░░` 81.7 |
+| 💖 Happiness | `████████████████████` 99.8 |
+| 🛁 Hygiene | `██████████████████░░` 87.9 |
+| ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 8.9 |
+| ❤️ Health | `█████████████████░░░` 87 |
+| **Last action** | sleep by Nattawatt |
+| **Blockchain** | height 580 · `00000457d79228a2…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`███████████████████████░░░░░░░░░` **731 / 1024** merged PRs · current form: **silver**
+`███████████████████████░░░░░░░░░` **732 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
