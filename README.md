@@ -22,14 +22,14 @@
 | 🍙 Hunger | `██████████████████░░` 88.8 |
 | 💖 Happiness | `████████████████████` 100 |
 | 🛁 Hygiene | `████████████████████` 98.1 |
-| ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 9.3 |
+| ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 9.4 |
 | ❤️ Health | `█████████████████░░░` 83.6 |
 | **Last action** | pet by Nattawatt |
-| **Blockchain** | height 398 · `00000b4d8723c0ce…` |
+| **Blockchain** | height 399 · `000008de0b54afb7…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`█████████████████░░░░░░░░░░░░░░░` **550 / 1024** merged PRs · current form: **silver**
+`█████████████████░░░░░░░░░░░░░░░` **551 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
