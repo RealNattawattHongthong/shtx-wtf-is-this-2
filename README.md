@@ -12,7 +12,7 @@
   / ^   ^     \/|
   \_____w_____/\|
       \/  \/    
-  💩 
+  💩 💩 
 ```
 
 | | |
@@ -23,13 +23,13 @@
 | 💖 Happiness | `████████████████████` 100 |
 | 🛁 Hygiene | `████████████████████` 99.7 |
 | ⚡ Energy | `░░░░░░░░░░░░░░░░░░░░` 0 |
-| ❤️ Health | `██████████████████░░` 90 |
-| **Last action** | snack by oh |
-| **Blockchain** | height 331 · `00000cd99664207d…` |
+| ❤️ Health | `██████████████████░░` 89.9 |
+| **Last action** | feed by oh |
+| **Blockchain** | height 332 · `000005e3d97512b1…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`███████████████░░░░░░░░░░░░░░░░░` **483 / 1024** merged PRs · current form: **silver**
+`███████████████░░░░░░░░░░░░░░░░░` **484 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
