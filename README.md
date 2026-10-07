@@ -6,28 +6,29 @@
 > Built for [Stupid Hackathon X](https://stupid.hackathon.in.th/x/). ห้ามสร้างสิ่งที่มีประโยชน์.
 
 ```text
-     ____     
-   /  . .\    
-  |  .  . |   
-  | .  .  |   
-   \______/   
+  ✦ silver ✦
+              
+     __/\__   
+  ><( ^  ^ )  
+     \_w__/   
+              
 ```
 
 | | |
 |---|---|
-| **Status** | egg · egg · generation 2 |
+| **Status** | happy · baby · generation 2 |
 | **Age** | 0 min |
 | 🍙 Hunger | `████████████████░░░░` 80 |
 | 💖 Happiness | `████████████████░░░░` 80 |
 | 🛁 Hygiene | `████████████████████` 100 |
 | ⚡ Energy | `████████████████████` 100 |
 | ❤️ Health | `████████████████████` 100 |
-| **Last action** | funeral by anonymous guest |
-| **Blockchain** | height 94 · `00000343fae54262…` |
+| **Last action** | hatch by 🤖 nanny |
+| **Blockchain** | height 95 · `000040e1f9c35bd5…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`████████░░░░░░░░░░░░░░░░░░░░░░░░` **245 / 1024** merged PRs · current form: **silver**
+`████████░░░░░░░░░░░░░░░░░░░░░░░░` **246 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
