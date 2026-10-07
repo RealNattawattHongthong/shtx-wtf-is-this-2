@@ -23,12 +23,12 @@
 | 🛁 Hygiene | `█████████████████░░░` 84.4 |
 | ⚡ Energy | `██░░░░░░░░░░░░░░░░░░` 11 |
 | ❤️ Health | `███████████████████░` 94.1 |
-| **Last action** | play by oh |
-| **Blockchain** | height 321 · `000004b309cb2751…` |
+| **Last action** | pet by oh |
+| **Blockchain** | height 322 · `00000c373cd5e249…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`███████████████░░░░░░░░░░░░░░░░░` **473 / 1024** merged PRs · current form: **silver**
+`███████████████░░░░░░░░░░░░░░░░░` **474 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
