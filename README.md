@@ -19,17 +19,17 @@
 |---|---|
 | **Status** | sleeping · teen · generation 2 |
 | **Age** | 11.5 h |
-| 🍙 Hunger | `███████████████████░` 93.8 |
-| 💖 Happiness | `████████████████████` 97.8 |
-| 🛁 Hygiene | `███████████████████░` 97.3 |
-| ⚡ Energy | `█░░░░░░░░░░░░░░░░░░░` 3.6 |
-| ❤️ Health | `█████████████████░░░` 84.6 |
+| 🍙 Hunger | `███████████████████░` 93.5 |
+| 💖 Happiness | `████████████████████` 100 |
+| 🛁 Hygiene | `███████████████████░` 97.2 |
+| ⚡ Energy | `█░░░░░░░░░░░░░░░░░░░` 4.1 |
+| ❤️ Health | `█████████████████░░░` 84.7 |
 | **Last action** | pet by 🤖 nanny |
-| **Blockchain** | height 350 · `000064c35d726c82…` |
+| **Blockchain** | height 351 · `0000b41ef60897cf…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`████████████████░░░░░░░░░░░░░░░░` **502 / 1024** merged PRs · current form: **silver**
+`████████████████░░░░░░░░░░░░░░░░` **503 / 1024** merged PRs · current form: **silver**
 
 ## 🪦 Graveyard
 
