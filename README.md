@@ -9,27 +9,26 @@
   \^^^^/ GOLDEN PULL SHARK
         /\      
    ____/  \___  
-  / -   -     \/|
-  \_____o_____/\|
+  / ^   ^     \/|
+  \_____w_____/\|
       \/  \/    
-                 z Z z
 ```
 
 | | |
 |---|---|
-| **Status** | sleeping · teen · generation 2 |
+| **Status** | happy · teen · generation 2 |
 | **Age** | 20.4 h |
-| 🍙 Hunger | `███████████████████░` 93 |
-| 💖 Happiness | `██████████████░░░░░░` 68.9 |
-| 🛁 Hygiene | `████████████████████` 98 |
-| ⚡ Energy | `█████░░░░░░░░░░░░░░░` 26.1 |
+| 🍙 Hunger | `███████████████████░` 92.8 |
+| 💖 Happiness | `██████████████░░░░░░` 68.8 |
+| 🛁 Hygiene | `████████████████████` 97.9 |
+| ⚡ Energy | `█████░░░░░░░░░░░░░░░` 26.6 |
 | ❤️ Health | `████████████████████` 100 |
 | **Last action** | sleep by Nattawatt |
-| **Blockchain** | height 872 · `0000064f36c961e2…` |
+| **Blockchain** | height 873 · `000004fd99bca082…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`████████████████████████████████` **1024 / 1024** merged PRs · current form: **gold**
+`████████████████████████████████` **1025 / 1024** merged PRs · current form: **gold**
 
 ## 🪦 Graveyard
 
