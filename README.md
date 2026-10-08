@@ -6,29 +6,30 @@
 > Built for [Stupid Hackathon X](https://stupid.hackathon.in.th/x/). ห้ามสร้างสิ่งที่มีประโยชน์.
 
 ```text
-  ✦ silver ✦
+  \^^^^/ GOLDEN PULL SHARK
         /\      
    ____/  \___  
-  / ^   ^     \/|
-  \_____w_____/\|
+  / -   -     \/|
+  \_____o_____/\|
       \/  \/    
+                 z Z z
 ```
 
 | | |
 |---|---|
-| **Status** | happy · teen · generation 2 |
+| **Status** | sleeping · teen · generation 2 |
 | **Age** | 20.4 h |
-| 🍙 Hunger | `███████████████████░` 93.1 |
-| 💖 Happiness | `██████████████░░░░░░` 69 |
+| 🍙 Hunger | `███████████████████░` 93 |
+| 💖 Happiness | `██████████████░░░░░░` 68.9 |
 | 🛁 Hygiene | `████████████████████` 98 |
 | ⚡ Energy | `█████░░░░░░░░░░░░░░░` 26.1 |
 | ❤️ Health | `████████████████████` 100 |
-| **Last action** | pet by Nattawatt |
-| **Blockchain** | height 871 · `00000ac2b9d6b5e2…` |
+| **Last action** | sleep by Nattawatt |
+| **Blockchain** | height 872 · `0000064f36c961e2…` |
 
 ## 🦈 Evolution toward the Golden Pull Shark
 
-`████████████████████████████████` **1023 / 1024** merged PRs · current form: **silver**
+`████████████████████████████████` **1024 / 1024** merged PRs · current form: **gold**
 
 ## 🪦 Graveyard
 
